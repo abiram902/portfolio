@@ -11,11 +11,11 @@ function ProjectTile(props) {
         class="project-tile-img"
       />
       <p>
-        <a href="https://abiram902.github.io/guestRoomBookingApp/" target="_blank">
+        <a href={props.link} target="_blank">
           {props.title}
         </a>
       </p>
-      <p className={styles.desc}>a room booking app with redux as a app level state management and with two type of user management and form, date, validation functionality</p>
+      <p className={styles.desc}>{props.desc}</p>
     </div>
   );
 }
