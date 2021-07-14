@@ -1,0 +1,32 @@
+#contact{
+    height:50vh;
+    background:linear-gradient(180deg, var(--superman-blue) , rgb(40,150,150) );
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+  }
+
+.profileLink{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width:80%;
+  margin:50px;
+  
+
+}
+.svg{
+  margin-right: 20px;
+}
+.eachlink{
+  margin-left: 50px;
+  background:rgba(0,0,0,0.3);
+  padding:5px 10px;
+  border-bottom:5px solid var(--superman-yellow);
+  box-shadow:-10px 10px 10px rgba(0,0,0,0.2);
+}
+.eachlink:hover{
+  box-shadow:-10px 10px 10px rgba(0,0,0,0.7);
+  
+}
