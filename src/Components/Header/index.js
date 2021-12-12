@@ -1,36 +1,32 @@
 import React from "react";
-import styles from "./Header.module.css";
-import { Link } from "react-scroll";
+import "./Header.css";
 
-function Header() {
+function Header({ clickedItem, onClick }) {
   return (
-    <nav id={styles["navbar"]}>
-      <ul>
-        <li>
-          <a href={styles["#welcome-section"]}>
-            <Link to="welcome" smooth={true}>
-              About
-            </Link>
-          </a>
-        </li>
+    <nav id={"navbar"}>
+      <ul
+        onClick={() => onClick("About")}
+        className={`nav__link ${
+          clickedItem === "About" && "selected__nav__link"
+        }`}
+      >
+        <li>About</li>
       </ul>
-      <ul>
-        <li>
-          <a href="#projects">
-            <Link to="projects" smooth={true}>
-              MyWork
-            </Link>
-          </a>
-        </li>
+      <ul
+        onClick={() => onClick("MyWork")}
+        className={`nav__link ${
+          clickedItem === "MyWork" && "selected__nav__link"
+        }`}
+      >
+        <li>MyWork</li>
       </ul>
-      <ul>
-        <li>
-          <a href="#contact">
-            <Link to="contact" smooth={true}>
-              Contact
-            </Link>
-          </a>
-        </li>
+      <ul
+        onClick={() => onClick("Contact")}
+        className={`nav__link ${
+          clickedItem === "Contact" && "selected__nav__link"
+        }`}
+      >
+        <li>Contact</li>
       </ul>
     </nav>
   );
